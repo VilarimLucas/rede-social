@@ -1,8 +1,32 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Fluxo Instantâneo | Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<style>
+    /* Estilos personalizados para o card */
+    .user-card {
+        max-width: 300px; /* Largura máxima do card */
+        margin: 0 auto; /* Centralizar o card */
+        text-align: center; /* Centralizar o texto */
+    }
+
+    .user-profile-pic {
+        width: 100px; /* Largura da foto de perfil */
+        height: 100px; /* Altura da foto de perfil */
+        border-radius: 50%; /* Tornar a foto de perfil circular */
+        margin: 0 auto 10px; /* Espaçamento abaixo da foto de perfil */
+    }
+</style>
+
+<div class="container text-center">
+    <div class="row row-cols-2">
+        <div class="col">
+            <div class="user-card card">
+                <img src="caminho-da-foto-de-perfil.jpg" class="user-profile-pic" alt="Foto de Perfil">
+                <h5 class="card-title">nomedeusuario</h5>
+                <p class="card-text">Descrição do usuário. Aqui você pode inserir um texto curto para descrever o usuário.</p>
+                <img src="caminho-da-foto-do-post.jpg" class="card-img-bottom" alt="Foto do Post">
+            </div>
+        </div>
+    </div>
 </div>

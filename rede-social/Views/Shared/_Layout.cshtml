@@ -3,16 +3,72 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - rede_social</title>
+    <title>@ViewData["Title"] - Fluxo Instantâneo</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/rede_social.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
+    <style>
+        /* Adicione estilos personalizados aqui */
+        .header {
+            background-color: #fff; /* Cor de fundo do header */
+            border-bottom: 1px solid #ccc; /* Borda inferior */
+            padding: 10px 0; /* Espaçamento interno superior e inferior */
+        }
+
+        .logo {
+            float: right; /* Alinhe o logotipo à direita */
+        }
+
+        .search-bar {
+            text-align: center; /* Alinhe a barra de pesquisa ao centro */
+        }
+
+        .user-menu {
+            float: left; /* Alinhe o menu de usuário à esquerda */
+            margin-right: 10px; /* Espaçamento à direita */
+        }
+    </style>
+
+    <header class="header">
+        <div class="container text-center">
+            <div class="row align-items-start">
+                <div class="col">
+                    <!-- Logotipo à direita -->
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Fluxo Instantâneo</a>
+                </div>
+                <div class="col">
+                    <!-- Barra de pesquisa -->
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Pesquisar" aria-label="Pesquisar" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <!-- Menu suspenso do usuário -->
+
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="..."  width="30" height="30">
+                            Nome do Usuário
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Ver Perfil</a></li>
+                            <li><a class="dropdown-item" href="#">Sair</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">rede_social</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Fluxo Instantâneo</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -29,18 +85,28 @@
                 </div>
             </div>
         </nav>
-    </header>
+    </header -->
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <!--footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - rede_social - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
+    </footer -->
+
+    <footer class="bg-light text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            &copy; 2023 - Fluxo Instantâneo - <a asp-area="" asp-controller="Home" asp-action="Privacy">Política de privacidade</a>
+
+        </div>
+        <!-- Copyright -->
     </footer>
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
