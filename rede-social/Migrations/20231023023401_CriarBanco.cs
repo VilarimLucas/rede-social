@@ -12,7 +12,7 @@ namespace rede_social.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Usuarios",
+                name: "Usuarios", // USUARIO
                 columns: table => new
                 {
                     id = table.Column<int>(type: "int", nullable: false)
